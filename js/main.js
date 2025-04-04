@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNav();
     initializeThemeToggle();
     initializeProjectFilters();
-    initializeTestimonialSlider();
     initializeSmoothScrolling();
 });
 
@@ -113,71 +112,7 @@ function initializeProjectFilters() {
     });
 }
 
-// Initialize testimonial slider
-function initializeTestimonialSlider() {
-    const testimonialItems = document.querySelectorAll('.testimonial-item');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    
-    if (!testimonialItems.length) return;
-    
-    let currentIndex = 0;
-    
-    // Hide all testimonials except the first one
-    testimonialItems.forEach((item, index) => {
-        if (index !== 0) {
-            item.style.display = 'none';
-        }
-    });
-    
-    // Function to show testimonial by index
-    function showTestimonial(index) {
-        // Hide all testimonials
-        testimonialItems.forEach(item => {
-            item.style.display = 'none';
-        });
-        
-        // Remove active class from all dots
-        dots.forEach(dot => {
-            dot.classList.remove('active');
-        });
-        
-        // Show selected testimonial
-        testimonialItems[index].style.display = 'block';
-        
-        // Add active class to selected dot
-        dots[index].classList.add('active');
-        
-        // Update current index
-        currentIndex = index;
-    }
-    
-    // Next testimonial
-    nextBtn.addEventListener('click', function() {
-        const newIndex = (currentIndex + 1) % testimonialItems.length;
-        showTestimonial(newIndex);
-    });
-    
-    // Previous testimonial
-    prevBtn.addEventListener('click', function() {
-        const newIndex = (currentIndex - 1 + testimonialItems.length) % testimonialItems.length;
-        showTestimonial(newIndex);
-    });
-    
-    // Dot click handlers
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', function() {
-            showTestimonial(index);
-        });
-    });
-    
-    // Auto slide (uncomment to enable)
-    // let slideInterval = setInterval(function() {
-    //     const newIndex = (currentIndex + 1) % testimonialItems.length;
-    //     showTestimonial(newIndex);
-    // }, 5000);
-}
+
 
 // Initialize smooth scrolling for anchor links
 function initializeSmoothScrolling() {

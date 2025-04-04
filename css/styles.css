@@ -176,7 +176,6 @@ button, input, textarea {
 }
 
 .theme-toggle {
-    margin-left: var(--spacing-md);
     cursor: pointer;
     color: var(--heading-color);
     font-size: 1.2rem;
