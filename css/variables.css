@@ -1,0 +1,74 @@
+:root {
+    /* Color Scheme */
+    --primary-color: #4a6cf7;        /* Primary blue */
+    --secondary-color: #f3616d;      /* Accent coral */
+    --tertiary-color: #6cd67e;       /* Accent green */
+    
+    --bg-color-light: #ffffff;
+    --text-color-light: #333333;
+    --heading-color-light: #1a1a1a;
+    --muted-color-light: #767676;
+    --border-color-light: #e6e6e6;
+    --card-bg-light: #f8f9fa;
+    
+    --bg-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --heading-color-dark: #ffffff;
+    --muted-color-dark: #a0a0a0;
+    --border-color-dark: #2d2d2d;
+    --card-bg-dark: #1e1e1e;
+    
+    /* Current theme colors (default to light) */
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --heading-color: var(--heading-color-light);
+    --muted-color: var(--muted-color-light);
+    --border-color: var(--border-color-light);
+    --card-bg: var(--card-bg-light);
+    
+    /* Typography */
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;  /* 8px */
+    --spacing-sm: 1rem;    /* 16px */
+    --spacing-md: 1.5rem;  /* 24px */
+    --spacing-lg: 2rem;    /* 32px */
+    --spacing-xl: 3rem;    /* 48px */
+    --spacing-xxl: 5rem;   /* 80px */
+    
+    /* Borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 50%;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Container max width */
+    --container-width: 1200px;
+    
+    /* Z-index layers */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Dark mode class to be toggled with JavaScript */
+body.dark-mode {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --heading-color: var(--heading-color-dark);
+    --muted-color: var(--muted-color-dark);
+    --border-color: var(--border-color-dark);
+    --card-bg: var(--card-bg-dark);
+}

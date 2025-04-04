@@ -1,0 +1,204 @@
+/* Responsive Styles */
+
+/* Large Desktops (1200px and up) */
+@media screen and (max-width: 1400px) {
+    /* Minor adjustments for large screens */
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Medium Desktops (992px to 1199px) */
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Hero section */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    /* Slightly reduce spacing for medium screens */
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* Tablets and Small Desktops (768px to 991px) */
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header navigation */
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        box-shadow: var(--shadow-sm);
+        flex-direction: column;
+        padding: var(--spacing-md) 0;
+        z-index: var(--z-fixed);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Mobile menu toggle animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* About section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Contact section */
+    .contact-content {
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Mobile Landscape (576px to 767px) */
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        max-width: 540px;
+        width: 95%;
+    }
+    
+    /* Section headers */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    /* Hero section */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Experience timeline */
+    .experience-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Mobile Portrait (Up to 575px) */
+@media screen and (max-width: 575px) {
+    .container {
+        width: 95%;
+    }
+    
+    /* Hero section */
+    .hero-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Personal info */
+    .personal-info {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Project filters */
+    .project-filters {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto var(--spacing-lg);
+    }
+    
+    .filter-btn {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+/* Height-based media queries for very small screens */
+@media screen and (max-height: 600px) {
+    #hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 50px;
+    }
+}
