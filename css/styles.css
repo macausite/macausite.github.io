@@ -685,6 +685,45 @@ button, input, textarea {
     background-color: var(--primary-color);
 }
 
+/* Thank You Section */
+#thank-you {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.thank-you-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-icon {
+    font-size: 5rem;
+    color: #28a745; /* Success green color */
+    margin-bottom: var(--spacing-md);
+}
+
+.thank-you-content h1 {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    color: var(--heading-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.thank-you-content p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-lg);
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
